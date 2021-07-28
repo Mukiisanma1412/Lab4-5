@@ -1,5 +1,5 @@
 <template>
-  <div class="list">
+  <div class="list">  
     <PassengerCard
       v-for="passenger in passengers"
       :key="passenger.id"

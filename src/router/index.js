@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import PassengerList from "../views/PassengerList.vue"
+import PassengerDetail from "../views/PassengerDetail.vue"
 
 const routes = [
   {
@@ -15,6 +16,12 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: '/passenger/:id',
+    name: 'PassengerDetail',
+    props: true,
+    component: PassengerDetail,
   },
 ];
 
