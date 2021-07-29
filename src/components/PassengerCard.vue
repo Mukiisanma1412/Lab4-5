@@ -1,6 +1,4 @@
 <template>
- 
-    
     <router-link
     class="event-link"
     :to="{ name: 'PassengerDetail', params: { id: passenger._id } }"
