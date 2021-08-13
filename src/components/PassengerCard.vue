@@ -1,11 +1,13 @@
 <template>
+  <div class="event-card">
     <router-link
-    class="event-link"
-    :to="{ name: 'PassengerDetail', params: { id: passenger._id } }"
-  ><div class="event-card">
+      class="event-link"
+      :to="{ name: 'PassengerDetail', params: { id: passenger._id } }"
+    >
       <h4>{{ passenger.name }}</h4>
-    </div>
-</router-link>
+    </router-link>
+    
+  </div>
 </template>
 
 <script>
@@ -14,8 +16,8 @@ export default {
   props: {
     passenger: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
 };
 </script>

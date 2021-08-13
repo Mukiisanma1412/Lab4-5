@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import PassengerList from "../views/PassengerList.vue"
 import PassengerDetail from "../views/PassengerDetail.vue"
+import NotFound from "../views/NotFound.vue"
 
 const routes = [
   {
@@ -22,6 +23,11 @@ const routes = [
     name: 'PassengerDetail',
     props: true,
     component: PassengerDetail,
+  },
+  {
+    path: '/:catchAll(.*)*',
+    name: 'NotFound',
+    component: NotFound,
   },
 ];
 
